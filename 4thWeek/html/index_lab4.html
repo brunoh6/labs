@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link href="https://fonts.googleapis.com/cass2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="../images/logo.png" alt="pic">
+            <div class="wrapper">
+                <div class="offer">
+                    <h1>With our help<br> you can get that what you've been</h1>
+                    <span class="title_span">wishing!</span>
+                    <p class="offer_text">Our disponibility + experience will allow you to reach your biggest goals. We believe in you!
+                        And we are sure about it to 100%. You can't be stopped!
+                    </p>
+                    <a href="#" class="btn">View more ...</a>
+                </div>
+                <img class="header_img" src="../images/header-img.png" alt="pic">
+            </div>
+
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <h2 class="main_title">What do you need?</h2>
+            <div class="main_block">
+                <div class="blocks">
+                    <img src="../images/f3.png" alt="pic">
+                    <h3>First block</h3>
+                    <p>Here goes text and more text and more text</p>
+                </div>
+                <div class="blocks">
+                    <img src="../images/f4.png" alt="pic">
+                    <h3>Second block</h3>
+                    <p>Here goes text and more text and more text</p>
+                </div>
+                <div class="blocks">
+                    <img src="../images/f5.png" alt="pic">
+                    <h3>Third block</h3>
+                    <p>Here goes text and more text and more text</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="form">
+        <div class="container">
+            <h2 class="second_title">Call Back Form</h2>
+            <div class="second_block">
+                <form id="sending" class="input">
+                    <input type="text" placeholder="Name"><br>
+                    <input type="text" placeholder="Enter your e-mail"><br>
+                    <input type="text" placeholder="Phone Number"><br>
+                    <input type="text" placeholder="What are you interested in?"><br>
+                    <button class="button" onclick="clearInputField()">Send request!</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="end">
+        <div class="final_text">
+            <p>© All rights reserved</p>
+        </div>
+    </section>
+    <script>
+        function clearInputField() {
+            document.getElementById('sending').reset();
+        }
+    </script>
+</body>
+</html>
