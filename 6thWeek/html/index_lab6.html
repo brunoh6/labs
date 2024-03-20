@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sizing Up&Down</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link href="https://fonts.googleapis.com/cass2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+<header>
+    <div class="container">
+        <img class="touch" src="../images/logo.png" alt="pic">
+        <div class="wrapper">
+            <div class="offer multi">
+                <h1 class="line">With our help<br> you can get that what you've been<br><span class="title_span line">wishing!</span></h1>
+                <p class="offer_text">Our disponibility + experience will allow you to reach your biggest goals. We believe in you!
+                    And we are sure about it to 100%. You can't be stopped!
+                </p>
+                <a href="#" class="btn">View more ...</a>
+            </div>
+            <img class="desktop animate__animated animate__fadeInDown header_img" src="../images/header-img.png" alt="pic">
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="container">
+        <h2 class="main_title desktop animate__animated animate__jackInTheBox">What do you need?</h2>
+        <div class="main_block">
+            <div class="blocks">
+                <img src="../images/f3.png" alt="pic">
+                <h3>First block</h3>
+                <p>Here goes text and more text and more text</p>
+            </div>
+            <div class="blocks">
+                <img class="imagen" src="../images/f4.png" alt="pic">
+                <h3>Second block</h3>
+                <p>Here goes text and more text and more text</p>
+            </div>
+            <div class="blocks">
+                <img src="../images/f5.png" alt="pic">
+                <h3>Third block</h3>
+                <p>Here goes text and more text and more text</p>
+            </div>
+        </div>
+    </div>
+</main>
+<section class="form">
+    <div class="container">
+        <h2 class="second_title">Call Back Form</h2>
+        <div class="second_block">
+            <form id="sending" class="input">
+                <input type="text" id="grow" placeholder="Name"/><br>
+                <input type="text" id="grow1" placeholder="Enter your e-mail"/><br>
+                <input type="text" id="grow2" placeholder="Phone Number"/><br>
+                <input type="text" id="grow3" placeholder="What are you interested in?"/><br>
+                <button class="button" onclick="clearInputField()">Send request!</button>
+                <span id="text-width" style="display: none; white-space: pre"></span>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="end">
+    <div class="typing_text">
+        <p>© All rights reserved</p>
+    </div>
+</section>
+<script>
+    const input = document.getElementById('grow');
+    const measurer = document.getElementById('text-width');
+
+    input.addEventListener('input', function(){
+        const style = window.getComputedStyle(input);
+        measurer.style.fontSize = style.fontSize;
+        measurer.style.fontFamily = style.fontFamily;
+        measurer.style.fontWeight = style.fontWeight;
+        measurer.style.letterSpacing = style.letterSpacing;
+        measurer.textContent = input.value || input.placeholder;
+        measurer.style.display = 'inline';
+        const textWidth = measurer.offsetWidth;
+        measurer.style.display = 'none';
+        input.style.width = Math.max(textWidth + 20, 150) + 'px';
+    });
+    function clearInputField() {
+        document.getElementById('sending').reset();
+    }
+</script>
+</body>
+</html>
