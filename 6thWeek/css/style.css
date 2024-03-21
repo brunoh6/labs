@@ -339,7 +339,7 @@ input, textarea {
     }
 
     input, textarea {
-        width: 300px;
+        width: 300%;
     }
 
     .button {
@@ -366,6 +366,10 @@ input, textarea {
 
     .input {
         padding: 0 10px 10px 140px;
+    }
+
+    input, textarea {
+        width: 290%;
     }
 
 }
@@ -396,6 +400,10 @@ input, textarea {
 
     .multi .line:nth-child(1) {
         font-size: 180%;
+    }
+
+    input, textarea {
+        width: 250%;
     }
 }
 
@@ -431,7 +439,7 @@ input, textarea {
     }
 
     input, textarea {
-        width: 150px;
+        width: 150%;
     }
 
     .input {
