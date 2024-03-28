@@ -1,1 +1,98 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
 
+h1 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+input {
+    text-align: center;
+}
+
+.box {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(52, 63, 83, 0.8);
+    border-color: #333333;
+}
+
+.back_text {
+    display: none;
+}
+
+.transition {
+    z-index: -1;
+    color: white;
+    font-size: xxx-large;
+    font-family: 'Ubuntu', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    border-right: 2px solid transparent;
+    animation: typing-and-deleting 6s steps(40, end) infinite, blink-cursor-typing-deleting .75s step-end infinite;
+}
+
+@keyframes typing-and-deleting {
+    0%, 100% { width: 0; }
+    50% { width: 100%; }
+}
+
+@keyframes blink-cursor-typing-deleting {
+    50% { border-color: transparent; }
+}
+
+#guessInput {
+    margin-top: 20px;
+    padding: 10px;
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+}
+
+#guessButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: darkgray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#guessButton:hover {
+    background-color: rgba(52, 63, 83, 0.8);
+}
+
+#feedback, #attempts {
+    margin-top: 20px;
+    color: #333;
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
