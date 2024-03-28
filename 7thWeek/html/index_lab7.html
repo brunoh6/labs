@@ -1,1 +1,25 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div class="desktop animate__animated animate__backInUp box">
+        <h1>Guess the Number</h1>
+        <p>Try to guess a random number between 1 and 10.</p>
+        <input type="number" id="guessInput" placeholder="Your guess">
+        <button id="guessButton">Make your guess</button>
+        <div id="feedback"></div>
+        <div id="attempts"></div>
+    </div>
+<section id="textField" class="back_text">
+    <div class="transition">
+        Not there yet! :)
+    </div>
+</section>
+<script src="../jscript/game.js"></script>
+</body>
+</html>
