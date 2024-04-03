@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>More JavaScript</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link href="https://fonts.googleapis.com/cass2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+<header>
+    <div class="container">
+        <img class="touch" src="../images/logo.png" alt="pic">
+        <div class="wrapper">
+            <div class="offer multi">
+                <h1 class="line">With our help<br> you can get that what you've been<br><span class="title_span line">wishing!</span></h1>
+                <p class="offer_text">Our disponibility + experience will allow you to reach your biggest goals. We believe in you!
+                    And we are sure about it to 100%. You can't be stopped!
+                </p>
+                <a href="#" class="btn">View more ...</a>
+            </div>
+            <img class="desktop animate__animated animate__fadeInDown header_img" src="../images/header-img.png" alt="pic">
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="container">
+        <h2 class="main_title desktop animate__animated animate__jackInTheBox">What do you need?</h2>
+        <div class="main_block">
+            <div class="blocks">
+                <img src="../images/f3.png" alt="pic">
+                <h3>First block</h3>
+                <p>Here goes text and more text and more text</p>
+            </div>
+            <div class="blocks">
+                <img class="imagen" src="../images/f4.png" alt="pic">
+                <h3>Second block</h3>
+                <p>Here goes text and more text and more text</p>
+            </div>
+            <div class="blocks">
+                <img src="../images/f5.png" alt="pic">
+                <h3>Third block</h3>
+                <p>Here goes text and more text and more text</p>
+            </div>
+        </div>
+    </div>
+</main>
+<section class="buy">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text">To place an order, please enter the information down below</div>
+        </div>
+    </div>
+    <form id="form" action="#">
+        <div class="container-row">
+                <div class="col-md-6 orderInfo">
+                    <h5>Order Information</h5>
+                    <div class="row">
+                        <div class="col-md-4">First Name:</div>
+                        <div class="col-md-4"><input class="form-control" id="first" type="text" onchange="checkFirst();" required /></div>
+                        <div class="col-md-4"><span id="first_Check"></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">Last Name:</div>
+                        <div class="col-md-4"><input class="form-control" id="last" type="text" onchange="checkLast();" required /></div>
+                        <div class="col-md-4"><span id="last_Check"></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">Phone Number:</div>
+                        <div class="col-md-4"><input class="form-control" id="phone" type="text" onchange="checkPhone();" placeholder="xxx-xxx-xxx" required /></div>
+                        <div class="col-md-4"><span id="phone_Check"></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">Destination:</div>
+                        <div class="col-md-4"><input class="form-control" id="dest" type="text" onchange="checkDest();" required /></div>
+                        <div class="col-md-4"><span id="dest_Check"></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">Date and Time:</div>
+                        <div class="col-md-4">
+                            <input class="form-control" id="date" type="date" required/>
+                            <input class="form-control" id="time" type="time" required/>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">Quantity:</div>
+                        <div class="col-md-4"><input class="form-control" id="quantity" type="number" min="1" max="5" required/></div>
+                        <div class="col-md-4"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">Payment method:</div>
+                        <div class="col-md-4">
+                            <select class="form-control" name="paymethod" id="paymethod" required>
+                                <option>Cash</option>
+                                <option>Debit/Credit Card</option>
+                                <option>PayPal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="sendOrder" onclick="outputData()">Send request!</button>
+                </div>
+                <div id="hidden" class="col-md-6 orderDesc">
+                    <h5>Order Summary</h5>
+                    <div class="row">
+                        <div id="summary"></div>
+                    </div>
+                </div>
+        </div>
+    </form>
+</section>
+<section class="form">
+    <div class="container">
+        <h2 class="second_title">Call Back Form</h2>
+        <div class="second_block">
+            <form id="sending" class="input">
+                <input type="text" id="grow" placeholder="Name"/><br>
+                <input type="text" id="grow1" placeholder="Enter your e-mail"/><br>
+                <input type="text" id="grow2" placeholder="Phone Number"/><br>
+                <input type="text" id="grow3" placeholder="What are you interested in?"/><br>
+                <button class="button" onclick="clearInputField()">Send request!</button>
+                <span id="text-width" style="display: none; white-space: pre"></span>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="end">
+    <div class="typing_text">
+        <p>© All rights reserved</p>
+    </div>
+</section>
+<script src="../jscript/action.js"></script>
+</body>
+</html>
