@@ -81,13 +81,16 @@
                         <div class="col-md-4">Date and Time:</div>
                         <div class="col-md-4">
                             <input class="form-control" id="date" type="date" required/>
+<!--                            <div class="col-md-4"><span id="date_Check"></span></div>-->
                             <input class="form-control" id="time" type="time" required/>
+<!--                            <div class="col-md-4"><span id="time_Check"></span></div>-->
                         </div>
                         <div class="col-md-4"></div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">Quantity:</div>
-                        <div class="col-md-4"><input class="form-control" id="quantity" type="number" min="1" max="5" required/></div>
+                        <div class="col-md-4"><input class="form-control" id="quantity" type="number" min="1" max="5" onchange="checkQuantity()" required/></div>
+                        <div class="col-md-4"><span id="quantity_Check"></span></div>
                         <div class="col-md-4"></div>
                     </div>
                     <div class="row">
@@ -100,7 +103,7 @@
                             </select>
                         </div>
                     </div>
-                    <button id="sendOrder" onclick="outputData()">Send request!</button>
+                    <button id="sendOrder" type="button" onclick="outputData()">Send request!</button>
                 </div>
                 <div id="hidden" class="col-md-6 orderDesc">
                     <h5>Order Summary</h5>
